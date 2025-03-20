@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip | TravelIndia</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: url("images/hero-bg.jpg");
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+            font-size: large;
+        }
+        .booking-form {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            max-width: 500px;
+        }
+        .inputBox {
+            margin-bottom: 15px;
+        }
+        .inputBox label, .inputBox input, .inputBox select {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            text-align: center;
+            font-size: medium;
+        }
+        .btn {
+            background: #3399cc;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #a{
+            color: white;
+        }
+        #a:hover{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>   <a href="index.html"  id="a"><</a>    </h2>
+        <h1>Book Your Trip</h1>
+    </header>
+    <section class="booking-form">
+        <form id="bookingForm">
+            <div class="inputBox">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="Goa">Goa</option>
+                    <option value="Manali">Manali</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+            </div>
+            <div class="inputBox">
+                <label for="arrival">Arrival Date</label>
+                <input type="date" id="arrival" name="arrival" required>
+            </div>
+            <div class="inputBox">
+                <label for="departure">Departure Date</label>
+                <input type="date" id="departure" name="departure" required>
+               
+            </div>
+
+ 
+                <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IucmaLcT3PJVch"
+                async> </script>
+        
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Page</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("images/hero-bg.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.7);
+}
+
+.wrapper {
+  width: 450px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.input-field label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input-field input, .input-field select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.input-field input::placeholder {
+  color: #ddd;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  width: 100%;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid white;
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="#">
+      <h2>Book Your Trip</h2>
+      
+      <div class="input-field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      
+      <div class="input-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      
+      <div class="input-field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      
+      <div class="input-field">
+        <label for="destination">Destination</label>
+        <select id="destination" required>
+          <option value="">Select your destination</option>
+          <option value="paris">Paris</option>
+          <option value="maldives">Maldives</option>
+          <option value="bali">Bali</option>
+          <option value="switzerland">Switzerland</option>
+        </select>
+      </div>
+      
+      <div class="input-field">
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" required>
+      </div>
+      <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IucmaLcT3PJVch"
+      async> </script> 
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</body>
+</html>
